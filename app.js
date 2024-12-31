@@ -4,7 +4,7 @@ const app = express();
 const PORT = 3010;
 
 const dummyUser = {
-  username: "test@test.com",
+  email: "test@test.com",
   password: "test0000",
 };
 
@@ -17,7 +17,7 @@ app.use(
 );
 
 app.post("/login", (req, res) => {
-  const { username, password } = req.body;
+  const { email, password } = req.body;
 
   if (!email || !password) {
     res.status(400).send({ message: "이메일과 비밀번호를 입력해주세요." });
