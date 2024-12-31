@@ -17,6 +17,7 @@ app.use(
 );
 
 app.post("/login", (req, res) => {
+  console.log("요청: ", req.body);
   const { email, password } = req.body;
 
   if (!email || !password) {
